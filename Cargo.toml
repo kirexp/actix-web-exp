@@ -1,0 +1,16 @@
+workspace = {   members = ["proc_macro", "shared"] }
+[package]
+name = "actix-web-exp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = {version = "4.5.1", features = ["default"]}
+utoipa-swagger-ui = { version = "6.0.0", features = ["actix-web"] }
+utoipa = {version = "4.2.0", features = ["actix_extras", "openapi_extensions"]}
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.114"
+proc_macro={path = "proc_macro"}
+shared={path = "shared"}
